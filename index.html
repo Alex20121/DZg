@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Зміна елементів DOM</title>
+  </head>
+  <body>
+    <!-- Завдання 1: Кнопка та текстове поле -->
+    <input type="text" id="textField" placeholder="Введіть текст" />
+    <button id="button">Натисніть мене</button>
+
+    <!-- Завдання 2: Заголовок та зображення -->
+    <h1>Заголовок</h1>
+    <img id="image1" src="job.jpg" alt="Старе зображення" />
+
+    <!-- Завдання 3: Посилання та зображення -->
+    <a id="link" href="https://www.virustotal.com/gui/home/upload">Посилання</a>
+    <img id="image2" src="warning.png" alt="Опис старого зображення" />
+
+    <!-- Завдання 4: Список елементів -->
+    <ul>
+      <li id="firstItem">Старий текст</li>
+      <li>Елемент 2</li>
+      <li>Елемент 3</li>
+    </ul>
+
+    <script>
+      // Завдання 1: Зміна тексту кнопки
+      document.getElementById("button").onclick = function () {
+        var text = document.getElementById("textField").value;
+        document.getElementById("button").textContent = text;
+      };
+
+      // Завдання 2: Зміна зображення
+      document.getElementById("image1").src = "job.jpg";
+
+      // Завдання 3: Зміна посилання та атрибутів зображення
+      document.getElementById("link").href =
+        "https://www.virustotal.com/gui/home/upload";
+      document.getElementById("image2").alt = "Опис нового зображення";
+
+      // Завдання 4: Зміна вмісту списку
+      document.getElementById("firstItem").textContent = "Новий текст";
+    </script>
+  </body>
+</html>
